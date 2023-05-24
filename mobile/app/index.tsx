@@ -29,6 +29,7 @@ export default function App() {
   )
 
   async function handleGithubOAuthCode(code: string) {
+    console.log(api)
     const response = await api.post('/register', {
       code,
     })

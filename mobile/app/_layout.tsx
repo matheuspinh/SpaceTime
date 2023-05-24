@@ -12,7 +12,7 @@ import {
 } from '@expo-google-fonts/roboto'
 
 import { BaiJamjuree_700Bold } from '@expo-google-fonts/bai-jamjuree'
-import { Slot, SplashScreen, Stack } from 'expo-router'
+import { SplashScreen, Stack } from 'expo-router'
 import { StatusBar } from 'expo-status-bar'
 import { useEffect, useState } from 'react'
 
