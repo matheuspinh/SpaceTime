@@ -5,7 +5,7 @@ import { makeRedirectUri, useAuthRequest } from 'expo-auth-session'
 import * as SecureStore from 'expo-secure-store'
 
 import NlwLogo from '../src/assets/nlw-spacetime-logo.svg'
-import { api } from '../src/assets/lib/api'
+import { api } from '../src/lib/api'
 
 const discovery = {
   authorizationEndpoint: 'https://github.com/login/oauth/authorize',
@@ -29,7 +29,6 @@ export default function App() {
   )
 
   async function handleGithubOAuthCode(code: string) {
-    console.log(api)
     const response = await api.post('/register', {
       code,
     })

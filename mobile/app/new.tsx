@@ -15,7 +15,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { useState } from 'react'
 import * as SecureStore from 'expo-secure-store'
 import * as ImagePicker from 'expo-image-picker'
-import { api } from '../src/assets/lib/api'
+import { api } from '../src/lib/api'
 
 export default function NewMemory() {
   const { bottom, top } = useSafeAreaInsets()
@@ -63,7 +63,6 @@ export default function NewMemory() {
       })
 
       coverUrl = uploadResponse.data.fileUrl
-      console.log(coverUrl)
     }
 
     await api.post(
